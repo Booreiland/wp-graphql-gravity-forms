@@ -8,11 +8,11 @@ use WPGraphQLGravityForms\Interfaces\Type;
 /**
  * An individual property for the 'inputs' Checkbox field property.
  */
-class CheckboxInputProperty implements Hookable, Type {
+class ConsentInputProperty implements Hookable, Type {
     /**
      * Type registered in WPGraphQL.
      */
-    const TYPE = 'CheckboxInputProperty';
+    const TYPE = 'ConsentInputProperty';
 
     public function register_hooks() {
         add_action( 'graphql_register_types', [ $this, 'register_type' ] );
@@ -33,6 +33,10 @@ class CheckboxInputProperty implements Hookable, Type {
                 'name' => [
                     'type'        => 'String',
                     'description' => __('When the field is configured with allowsPrepopulate set to 1, this property contains the parameter name to be used to populate this field (equivalent to the inputName property of single-input fields).', 'wp-graphql-gravity-forms'),
+                ],
+                'isHidden' => [
+                    'type'        => 'Boolean',
+                    'description' => __('Whether or not this checkbox field should be hidden.', 'wp-graphql-gravity-forms'),
                 ]
             ],
         ] );
