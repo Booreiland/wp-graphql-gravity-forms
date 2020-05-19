@@ -95,6 +95,7 @@ final class WPGraphQLGravityForms {
 		// Field Properties
 		$this->instances['chained_select_choice_property'] = new FieldProperty\ChainedSelectChoiceProperty();
 		$this->instances['checkbox_input_property']        = new FieldProperty\CheckboxInputProperty();
+		$this->instances['consent_input_property']         = new FieldProperty\ConsentInputProperty();
 		$this->instances['choice_property']                = new FieldProperty\ChoiceProperty();
 		$this->instances['input_property']                 = new FieldProperty\InputProperty();
 		$this->instances['list_choice_property']           = new FieldProperty\ListChoiceProperty();
