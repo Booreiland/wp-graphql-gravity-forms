@@ -33,7 +33,7 @@ class CheckboxInputProperty implements Hookable, Type {
                 'name' => [
                     'type'        => 'String',
                     'description' => __('When the field is configured with allowsPrepopulate set to 1, this property contains the parameter name to be used to populate this field (equivalent to the inputName property of single-input fields).', 'wp-graphql-gravity-forms'),
-                ]
+                ],
             ],
         ] );
     }
