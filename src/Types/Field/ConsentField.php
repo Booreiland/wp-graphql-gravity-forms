@@ -37,13 +37,13 @@ class ConsentField extends Field {
                 FieldProperty\IsRequiredProperty::get(),
                 FieldProperty\SizeProperty::get(),
                 [
+                    'checkboxLabel' => [
+                        'type'        => 'String',
+                        'description' => __('The consent checkbox label.', 'wp-graphql-gravity-forms' ),
+                    ],
                     'inputs' => [
                         'type'        => [ 'list_of' => FieldProperty\CheckboxInputProperty::TYPE ],
                         'description' => __( 'List of inputs. Checkboxes are treated as multi-input fields, since each checkbox item is stored separately.', 'wp-graphql-gravity-forms' ),
-                    ],
-                    'enableSelectAll' => [
-                        'type'        => 'Boolean',
-                        'description' => __( 'Whether the "select all" choice should be displayed.', 'wp-graphql-gravity-forms' ),
                     ]
                 ]
             ),
