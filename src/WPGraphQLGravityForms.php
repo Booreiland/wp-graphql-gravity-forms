@@ -127,6 +127,7 @@ final class WPGraphQLGravityForms {
 		$this->instances['entry_user']                 = new Entry\EntryUser();
 
 		// Input
+		$this->instances['name_input']                 = new Input\NameInput();
 		$this->instances['checkbox_input']             = new Input\CheckboxInput();
 		$this->instances['entries_date_fiters_input']  = new Input\EntriesDateFiltersInput();
 		$this->instances['entries_field_fiters_input'] = new Input\EntriesFieldFiltersInput();
@@ -165,6 +166,7 @@ final class WPGraphQLGravityForms {
 		$this->instances['update_draft_entry_text_area_field_value']    = new Mutations\UpdateDraftEntryTextAreaFieldValue( $this->instances['draft_entry_data_manipulator'] );
 		$this->instances['update_draft_entry_text_field_value']         = new Mutations\UpdateDraftEntryTextFieldValue( $this->instances['draft_entry_data_manipulator'] );
 		$this->instances['update_draft_entry_website_field_value']      = new Mutations\UpdateDraftEntryWebsiteFieldValue( $this->instances['draft_entry_data_manipulator'] );
+		$this->instances['update_draft_entry_name_field_value']         = new Mutations\UpdateDraftEntryNameFieldValue( $this->instances['draft_entry_data_manipulator'] );
 	}
 
 	private function register_hooks() {
